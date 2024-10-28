@@ -146,14 +146,17 @@ header {
     display: flex;
     gap: 50px;
     flex-wrap:wrap;
+    justify-content: space-between;
+
     
 }
 
 .project-item {
-    flex: 1 1 225px;
+    flex: 1 1 30%;
     text-align: center;
     background: #eee;
     border-radius: 10px;
+    position: relative;
     overflow:hidden;
     animation: slideIn 1s;
     transition: transform 1s; /* Smooth hover effect */
@@ -170,8 +173,9 @@ header {
 }
 
 .project-item img {
-    width: 90%;
-    height: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .project-item div {
@@ -245,4 +249,8 @@ button:hover {
         margin: 10px 0; /* Space between items in dropdown */
         text-align: center; /* Center align text */
     }
+    .project-item {
+            flex: 1 1 30%; /* Stacks items on smaller screens */
+    }
+    
 }
